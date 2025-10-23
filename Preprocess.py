@@ -27,12 +27,12 @@ class Preprocess:
               continue
             
             # Open file and read stories (There is one story per line)
-            with open(input_path) as f:
+            with open(input_path,  encoding="utf-8") as f:
                 stories = f.readlines()
 
             truncated_stories = [" ".join(story.split()[:self.max_story_length]) for story in stories]
 
-            with open(output_path, "w") as f:
+            with open(output_path, "w", encoding="utf-8") as f:
               for story in truncated_stories:
                 f.write(story.strip() + "\n")
 
