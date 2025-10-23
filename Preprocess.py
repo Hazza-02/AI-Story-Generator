@@ -26,8 +26,8 @@ class Preprocess:
               print(f"File {input_path} does not exist. Skipping!")
               continue
             
-            # Open file and read stories (There is one story per line)
-            with open(input_path,  encoding="utf-8") as f:
+            # Open file and read stories (There is one story per line) using utf-8 encoding as recieved an error without it
+            with open(input_path,  encoding="utf-8") as f: 
                 stories = f.readlines()
 
             truncated_stories = [" ".join(story.split()[:self.max_story_length]) for story in stories]
