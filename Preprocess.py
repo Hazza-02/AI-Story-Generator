@@ -35,6 +35,15 @@ class Preprocess:
             with open(output_path, "w", encoding="utf-8") as f:
               for story in truncated_stories:
                 f.write(story.strip() + "\n")
+      
+    def create_vocab(self):
+        # Future implementation for creating vocabulary from dataset
+        pass
+    
+
+    def tokenize(self):
+        # Future implementation for tokenizing the text data
+        pass
 
 if __name__ == "__main__":
     
